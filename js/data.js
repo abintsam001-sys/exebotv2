@@ -1,6 +1,6 @@
 // EDIT THIS FILE to add your real episodes, contestants and updates.
 const episodes = [
-  { id: 1, title: "Bigg Boss Malayalam S8 — Episode 01", date: "Add date", description: "Add your episode description here.", videoUrl: "" },
+  { id: 1, title: "BBMal: Season Premiere", date: "", description: "watch now", videoUrl: "https://youtu.be/VDWfY45Lrfo?si=FyC5AukvNg78iLgU" },
   { id: 2, title: "Bigg Boss Malayalam S8 — Episode 02", date: "Add date", description: "Add your episode description here.", videoUrl: "" },
   { id: 3, title: "Bigg Boss Malayalam S8 — Episode 03", date: "Add date", description: "Add your episode description here.", videoUrl: "" }
 ];
