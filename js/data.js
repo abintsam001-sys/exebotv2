@@ -10,7 +10,7 @@ const episodes = [
 // Contestants page to preview a picture (saved in that browser only) until you
 // add a permanent image path here.
 const contestants = [
-  { name: "Contestant 01", role: "Housemate", bio: "Add contestant information here.", image: "" },
+  { name: "Muhammed Azif", role: "IN HOUSE", bio: "INFLUEMCER", image: "https://img.youtube.com/vi/NlnG2UCzG_s/maxresdefault.jpg" },
   { name: "Contestant 02", role: "Housemate", bio: "Add contestant information here.", image: "" },
   { name: "Contestant 03", role: "Housemate", bio: "Add contestant information here.", image: "" },
   { name: "Contestant 04", role: "Housemate", bio: "Add contestant information here.", image: "" }
