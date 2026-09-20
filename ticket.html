@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Booking Confirmed | BUS WAVE</title>
+<meta name="description" content="Your BUS WAVE e-ticket with QR code.">
+<link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<style>
+  @media print {
+    .siteHeader, .siteFooter, .ticketActions, .confirmBanner, .breadcrumbSec { display: none !important; }
+    body { background: #fff; }
+  }
+</style>
+</head>
+<body>
+
+<header class="siteHeader">
+  <div class="container navRow">
+    <a href="index.html" class="brand"><span class="brandMark">BW</span>BUS<span class="wave">WAVE</span></a>
+    <nav class="navMenu">
+      <a href="index.html">Home</a>
+      <a href="search.html">Search Buses</a>
+      <a href="offers.html">Offers</a>
+      <a href="bookings.html">My Bookings</a>
+      <a href="help.html">Help</a>
+    </nav>
+    <div class="navActions">
+      <div data-auth-slot></div>
+      <button class="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="ticketApp">
+  <div class="container ticketWrap">
+    <div class="confirmBanner">
+      <div class="checkCircle">✓</div>
+      <h1>Booking Confirmed!</h1>
+      <p>Your e-ticket is ready. Have a great journey with BUS WAVE.</p>
+    </div>
+
+    <div class="ticketCard">
+      <div class="ticketHead">
+        <div class="tbrand">BUS WAVE</div>
+        <div>Booking ID: <b id="tkBookingId"></b></div>
+      </div>
+      <div class="ticketBody">
+        <div class="ticketRoute">
+          <div><div class="city" id="tkFrom"></div><div class="time" id="tkDepTime"></div></div>
+          <div class="arrowMid">→</div>
+          <div style="text-align:right"><div class="city" id="tkTo"></div><div class="time" id="tkArrTime"></div></div>
+        </div>
+        <div class="ticketGrid">
+          <div><div class="label">Passenger(s)</div><div class="val" id="tkPassenger"></div></div>
+          <div><div class="label">Bus Operator</div><div class="val" id="tkOperator"></div></div>
+          <div><div class="label">Bus Type</div><div class="val" id="tkBusType"></div></div>
+          <div><div class="label">Travel Date</div><div class="val" id="tkDate"></div></div>
+          <div><div class="label">Seat Number(s)</div><div class="val" id="tkSeats"></div></div>
+          <div><div class="label">Amount Paid</div><div class="val" id="tkTotal"></div></div>
+          <div><div class="label">Boarding Point</div><div class="val" id="tkBoarding"></div></div>
+          <div><div class="label">Dropping Point</div><div class="val" id="tkDropping"></div></div>
+        </div>
+        <div class="ticketQrRow">
+          <div>
+            <div class="label">Scan at boarding</div>
+            <p class="mb0" style="font-size:.82rem">Show this QR code to the conductor.</p>
+          </div>
+          <div id="qrCode"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ticketActions">
+      <button id="downloadTicketBtn" class="btn btn--primary btn--block">Download Ticket</button>
+      <button id="printTicketBtn" class="btn btn--ghost btn--block">Print Ticket</button>
+    </div>
+    <a href="index.html" class="btn btn--dark btn--block mt16">Back to Home</a>
+  </div>
+</section>
+
+<footer class="siteFooter">
+  <div class="container footBottom">
+    <span>© <span data-year></span> BUS WAVE. Demo project — not a real booking service.</span>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/booking.js"></script>
+</body>
+</html>

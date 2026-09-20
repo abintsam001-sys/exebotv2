@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Offers | BUS WAVE</title>
+<meta name="description" content="Browse demo coupon codes and offers on BUS WAVE.">
+<link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<header class="siteHeader">
+  <div class="container navRow">
+    <a href="index.html" class="brand"><span class="brandMark">BW</span>BUS<span class="wave">WAVE</span></a>
+    <nav class="navMenu">
+      <a href="index.html">Home</a>
+      <a href="search.html">Search Buses</a>
+      <a href="offers.html" class="active">Offers</a>
+      <a href="bookings.html">My Bookings</a>
+      <a href="help.html">Help</a>
+    </nav>
+    <div class="navActions">
+      <div data-auth-slot></div>
+      <button class="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="pageHero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Offers</div>
+    <h1>Offers &amp; Coupons</h1>
+    <p class="mb0">Apply any of these codes during checkout to save on your fare.</p>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="container">
+    <div class="offersPageGrid" id="offersPageGrid"></div>
+
+    <div class="card mt32">
+      <h3>How to use a coupon</h3>
+      <ol style="padding-left:20px;color:var(--ink-700)">
+        <li>Select your seats and enter passenger details.</li>
+        <li>On the Checkout page, find the "Enter coupon code" box.</li>
+        <li>Type the code exactly (e.g. WAVE100) and click Apply.</li>
+        <li>Your discount is reflected instantly in the fare summary.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<footer class="siteFooter">
+  <div class="container footBottom">
+    <span>© <span data-year></span> BUS WAVE. Demo project — not a real booking service.</span>
+    <a href="index.html">Back to home</a>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script>
+  const grid = document.getElementById("offersPageGrid");
+  OFFERS.forEach(o => {
+    grid.innerHTML += `
+      <div class="offerCard">
+        <div class="perf"></div>
+        <div class="code">${o.code}</div>
+        <div class="value">${o.type === "percent" ? o.value + "% OFF" : "₹" + o.value + " OFF"}</div>
+        <div class="desc">${o.desc}</div>
+        <div class="desc mt8">Min. booking: ${BW.fmtPrice(o.minAmount)} · Max discount: ${BW.fmtPrice(o.cap)}</div>
+      </div>`;
+  });
+</script>
+</body>
+</html>

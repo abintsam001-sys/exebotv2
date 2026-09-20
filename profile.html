@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Profile | BUS WAVE</title>
+<meta name="description" content="Manage your BUS WAVE demo profile.">
+<link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<header class="siteHeader">
+  <div class="container navRow">
+    <a href="index.html" class="brand"><span class="brandMark">BW</span>BUS<span class="wave">WAVE</span></a>
+    <nav class="navMenu">
+      <a href="index.html">Home</a>
+      <a href="search.html">Search Buses</a>
+      <a href="offers.html">Offers</a>
+      <a href="bookings.html">My Bookings</a>
+      <a href="help.html">Help</a>
+    </nav>
+    <div class="navActions">
+      <div data-auth-slot></div>
+      <button class="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="pageHero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Profile</div>
+    <h1>My Profile</h1>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="container" style="max-width:720px">
+    <div class="profileHead">
+      <div class="profileAvatar" id="profileAvatar">D</div>
+      <div>
+        <h2 class="mb0" id="profileName">—</h2>
+        <p class="mb0" id="profileEmail">—</p>
+      </div>
+    </div>
+
+    <div class="profileStatsGrid">
+      <div class="statBox"><b id="statBookings">0</b><span class="busResultType">Total Bookings</span></div>
+      <div class="statBox"><b id="statUpcoming">0</b><span class="busResultType">Upcoming Trips</span></div>
+      <div class="statBox"><b id="statSpend">₹0</b><span class="busResultType">Total Spend</span></div>
+    </div>
+
+    <div class="card">
+      <h3>Edit Details</h3>
+      <form id="profileForm">
+        <div class="formGroup"><label>Full Name</label><input type="text" id="profileNameInput" required></div>
+        <div class="formGroup"><label>Email (cannot be changed in demo)</label><input type="email" id="profileEmailInput" disabled></div>
+        <div class="formGroup"><label>Phone Number</label><input type="tel" id="profilePhone"></div>
+        <button type="submit" class="btn btn--primary">Save Changes</button>
+      </form>
+    </div>
+
+    <div class="flexBetween mt24">
+      <a href="bookings.html" class="btn btn--ghost">View My Bookings</a>
+      <button id="logoutBtn" class="btn btn--outline">Log Out</button>
+    </div>
+  </div>
+</section>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

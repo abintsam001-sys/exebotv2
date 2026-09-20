@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Register | BUS WAVE</title>
+<meta name="description" content="Create a BUS WAVE demo account.">
+<link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<header class="siteHeader">
+  <div class="container navRow">
+    <a href="index.html" class="brand"><span class="brandMark">BW</span>BUS<span class="wave">WAVE</span></a>
+    <nav class="navMenu">
+      <a href="index.html">Home</a>
+      <a href="search.html">Search Buses</a>
+      <a href="offers.html">Offers</a>
+      <a href="bookings.html">My Bookings</a>
+      <a href="help.html">Help</a>
+    </nav>
+    <div class="navActions">
+      <div data-auth-slot></div>
+      <button class="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="section" style="padding-top:56px">
+  <div class="container">
+    <div class="formCard">
+      <h2 class="textCenter">Create your account</h2>
+      <p class="textCenter">Join BUS WAVE to book faster and track your trips.</p>
+      <div class="demoNotice">This is a demo registration stored in your browser's local storage — not a secure production system. Don't use a real password.</div>
+      <form id="registerForm">
+        <div class="formGroup"><label>Full Name</label><input type="text" id="regName" required placeholder="Your full name"></div>
+        <div class="formGroup"><label>Email</label><input type="email" id="regEmail" required placeholder="you@example.com"></div>
+        <div class="formGroup"><label>Phone Number</label><input type="tel" id="regPhone" required placeholder="10-digit mobile number"></div>
+        <div class="formGroup"><label>Password</label><input type="password" id="regPassword" required placeholder="Min 4 characters"></div>
+        <button type="submit" class="btn btn--primary btn--block">Create Account</button>
+      </form>
+      <p class="textCenter mt16 mb0">Already have an account? <a href="login.html" style="color:var(--red-600);font-weight:700">Log in</a></p>
+    </div>
+  </div>
+</section>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

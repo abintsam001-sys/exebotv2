@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Help &amp; FAQ | BUS WAVE</title>
+<meta name="description" content="Get help with bookings, cancellations, payments and more on BUS WAVE.">
+<link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<header class="siteHeader">
+  <div class="container navRow">
+    <a href="index.html" class="brand"><span class="brandMark">BW</span>BUS<span class="wave">WAVE</span></a>
+    <nav class="navMenu">
+      <a href="index.html">Home</a>
+      <a href="search.html">Search Buses</a>
+      <a href="offers.html">Offers</a>
+      <a href="bookings.html">My Bookings</a>
+      <a href="help.html" class="active">Help</a>
+    </nav>
+    <div class="navActions">
+      <div data-auth-slot></div>
+      <button class="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="pageHero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Help</div>
+    <h1>Help &amp; FAQ</h1>
+    <p class="mb0">Everything you need to know about using this BUS WAVE demo.</p>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="container">
+    <div class="helpCatGrid">
+      <div class="helpCat"><div class="whyIcon" style="margin:0 auto 12px">🎫</div><h3>Bookings</h3><p>How to search, select seats and confirm a trip.</p></div>
+      <div class="helpCat"><div class="whyIcon" style="margin:0 auto 12px">💳</div><h3>Payments</h3><p>How the demo payment simulation works.</p></div>
+      <div class="helpCat"><div class="whyIcon" style="margin:0 auto 12px">🔄</div><h3>Cancellations</h3><p>Cancelling or managing an existing booking.</p></div>
+    </div>
+
+    <div class="faqList" id="helpFaqList"></div>
+  </div>
+</section>
+
+<footer class="siteFooter">
+  <div class="container footBottom">
+    <span>© <span data-year></span> BUS WAVE. Demo project — not a real booking service.</span>
+    <a href="index.html">Back to home</a>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script>
+  const faqs = [
+    ["How does BUS WAVE work?", "Search a route from the home page, browse available demo buses, pick your seat on the interactive seat map, fill in passenger details, then complete the simulated checkout to receive an e-ticket."],
+    ["Is my payment information safe?", "BUS WAVE is a demo project — no real payment gateway is used and no card or bank details are transmitted anywhere. All 'payments' are simulated in your browser."],
+    ["Where is my data stored?", "Your bookings, login and profile details are stored only in your browser's local storage. Clearing your browser data will remove them."],
+    ["Can I change my seat after booking?", "Not in this demo. You can cancel the booking from My Bookings and create a new one instead."],
+    ["How do coupon codes work?", "Enter a valid code such as FIRSTBUS, WAVE100 or WEEKEND on the checkout page. The discount is calculated instantly based on the code's rules."],
+    ["I found a bug — what do I do?", "Since this is a demo/portfolio project, feel free to treat any odd behaviour as part of the experience — there's no live support team behind it."]
+  ];
+  const box = document.getElementById("helpFaqList");
+  faqs.forEach(([q, a], i) => {
+    box.innerHTML += `
+      <div class="faqItem"><button class="faqQ">${q}<span class="plus">+</span></button><div class="faqA"><p>${a}</p></div></div>`;
+  });
+  box.querySelectorAll(".faqQ").forEach(btn => btn.addEventListener("click", () => btn.parentElement.classList.toggle("open")));
+</script>
+</body>
+</html>

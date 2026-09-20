@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BUS WAVE — Book. Board. Go. | Online Bus Ticket Booking</title>
+<meta name="description" content="BUS WAVE is a demo online bus ticket booking platform. Search buses, pick your seat, and book your journey across India in minutes.">
+<meta property="og:title" content="BUS WAVE — Book. Board. Go.">
+<meta property="og:description" content="A modern demo bus ticket booking platform. Search, select seats and book instantly.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<header class="siteHeader">
+  <div class="container navRow">
+    <a href="index.html" class="brand"><span class="brandMark">BW</span>BUS<span class="wave">WAVE</span></a>
+    <nav class="navMenu">
+      <a href="index.html" class="active">Home</a>
+      <a href="search.html">Search Buses</a>
+      <a href="offers.html">Offers</a>
+      <a href="bookings.html">My Bookings</a>
+      <a href="help.html">Help</a>
+    </nav>
+    <div class="navActions">
+      <div data-auth-slot></div>
+      <button class="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container heroInner">
+    <div>
+      <div class="heroTag">India's freshest way to book bus tickets</div>
+      <h1>Book. Board. <span class="accent">Go.</span></h1>
+      <p class="lead">Search thousands of demo routes, pick the perfect seat, and get your e-ticket in under a minute — no queues, no hassle, just BUS WAVE.</p>
+      <div class="heroStats">
+        <div><b>20+</b><span>Demo buses</span></div>
+        <div><b>14</b><span>Cities covered</span></div>
+        <div><b>4.6★</b><span>Avg. rating</span></div>
+      </div>
+    </div>
+    <div class="heroArt">
+      <div class="busIllustration">
+        <div class="busCard3d">
+          <div class="row1"><b>KSRTC Express</b><span class="badge" style="background:rgba(255,255,255,.2);color:#fff">AC Sleeper</span></div>
+          <div class="windowsRow"><div></div><div></div><div></div><div></div><div></div></div>
+          <div class="row2">
+            <div><b>10:30 PM</b>Bengaluru</div>
+            <div><b>7:00 AM</b>Kochi</div>
+            <div><b>₹899</b>18 seats left</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="searchBox">
+      <form id="searchForm" class="searchGrid">
+        <div class="field">
+          <label for="fromCity">From</label>
+          <select id="fromCity" required></select>
+        </div>
+        <button type="button" class="swapBtn" id="swapBtn" title="Swap cities" aria-label="Swap cities">⇄</button>
+        <div class="field">
+          <label for="toCity">To</label>
+          <select id="toCity" required></select>
+        </div>
+        <div class="field">
+          <label for="travelDate">Travel Date</label>
+          <input type="date" id="travelDate" required>
+        </div>
+        <div class="field">
+          <label for="passengers">Passengers</label>
+          <select id="passengers">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option>
+          </select>
+        </div>
+        <div class="searchSubmitRow">
+          <button type="submit" class="btn btn--primary btn--block">Search Buses</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="sectionHead">
+      <span class="eyebrow">Trending</span>
+      <h2>Popular routes</h2>
+      <p>Some of the most booked demo routes on BUS WAVE this week.</p>
+    </div>
+    <div class="chipGrid" id="popularRoutes"></div>
+  </div>
+</section>
+
+<section class="section section--gray">
+  <div class="container">
+    <div class="sectionHead">
+      <span class="eyebrow">Everywhere you want to be</span>
+      <h2>Popular cities</h2>
+    </div>
+    <div class="cityGrid" id="popularCities"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="sectionHead">
+      <span class="eyebrow">Save more</span>
+      <h2>Offers &amp; coupons</h2>
+      <p>Apply these at checkout to bring your fare down.</p>
+    </div>
+    <div class="offerGrid" id="offerGrid"></div>
+  </div>
+</section>
+
+<section class="section section--gray">
+  <div class="container">
+    <div class="sectionHead">
+      <span class="eyebrow">Why BUS WAVE</span>
+      <h2>Built for a smoother ride</h2>
+    </div>
+    <div class="whyGrid">
+      <div class="whyCard"><div class="whyIcon">🎟️</div><h3>Instant e-tickets</h3><p>Get a QR-coded ticket the moment your demo payment is confirmed.</p></div>
+      <div class="whyCard"><div class="whyIcon">🛋️</div><h3>Real seat maps</h3><p>Pick your exact seat on an interactive sleeper or seater layout.</p></div>
+      <div class="whyCard"><div class="whyIcon">💸</div><h3>Transparent fares</h3><p>See base fare, fees and discounts broken down before you pay.</p></div>
+      <div class="whyCard"><div class="whyIcon">🕒</div><h3>Manage anytime</h3><p>View, download or cancel bookings from My Bookings in one tap.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="sectionHead">
+      <span class="eyebrow">Loved by riders</span>
+      <h2>What travellers say</h2>
+    </div>
+    <div class="reviewGrid" id="reviewGrid"></div>
+  </div>
+</section>
+
+<section class="section section--gray">
+  <div class="container">
+    <div class="sectionHead">
+      <span class="eyebrow">Questions</span>
+      <h2>Frequently asked questions</h2>
+    </div>
+    <div class="faqList" id="faqList"></div>
+  </div>
+</section>
+
+<footer class="siteFooter">
+  <div class="container">
+    <div class="footGrid">
+      <div>
+        <div class="footBrand"><span class="brandMark">BW</span>BUS WAVE</div>
+        <p style="color:#9aa0b3">A demo bus ticket booking experience. Book. Board. Go.</p>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul><li><a href="help.html">Help &amp; FAQ</a></li><li><a href="offers.html">Offers</a></li><li><a href="admin/index.html">Admin</a></li></ul>
+      </div>
+      <div>
+        <h4>Account</h4>
+        <ul><li><a href="login.html">Log In</a></li><li><a href="register.html">Register</a></li><li><a href="bookings.html">My Bookings</a></li></ul>
+      </div>
+      <div>
+        <h4>Popular</h4>
+        <ul><li><a href="search.html?from=Bengaluru&to=Kochi">Bengaluru → Kochi</a></li><li><a href="search.html?from=Mumbai&to=Pune">Mumbai → Pune</a></li><li><a href="search.html?from=Delhi&to=Jaipur">Delhi → Jaipur</a></li></ul>
+      </div>
+    </div>
+    <div class="footBottom">
+      <span>© <span data-year></span> BUS WAVE. Demo project — not a real booking service.</span>
+      <span>Made for demonstration purposes only</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script>
+  const fromSel = document.getElementById("fromCity");
+  const toSel = document.getElementById("toCity");
+  CITIES.forEach(c => {
+    fromSel.innerHTML += `<option value="${c}">${c}</option>`;
+    toSel.innerHTML += `<option value="${c}">${c}</option>`;
+  });
+  fromSel.value = "Bengaluru";
+  toSel.value = "Kochi";
+
+  document.getElementById("swapBtn").addEventListener("click", () => {
+    const tmp = fromSel.value; fromSel.value = toSel.value; toSel.value = tmp;
+  });
+
+  const dateInput = document.getElementById("travelDate");
+  const today = new Date().toISOString().split("T")[0];
+  dateInput.min = today; dateInput.value = today;
+
+  document.getElementById("searchForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (fromSel.value === toSel.value) { BW.toast("Origin and destination can't be the same", "error"); return; }
+    const params = new URLSearchParams({
+      from: fromSel.value, to: toSel.value, date: dateInput.value, pax: document.getElementById("passengers").value
+    });
+    window.location.href = `search.html?${params.toString()}`;
+  });
+
+  /* Popular routes */
+  const routesBox = document.getElementById("popularRoutes");
+  POPULAR_ROUTES.forEach(([f, t]) => {
+    const bus = BUSES.find(b => b.from === f && b.to === t);
+    routesBox.innerHTML += `
+      <a class="routeChip" href="search.html?from=${f}&to=${t}&date=${today}&pax=1">
+        <div>
+          <div class="cities">${f}<span class="arrow">→</span>${t}</div>
+          <div class="price">from ${bus ? BW.fmtPrice(bus.price) : "₹499"}</div>
+        </div>
+        <span>›</span>
+      </a>`;
+  });
+
+  /* Popular cities */
+  const cityBox = document.getElementById("popularCities");
+  CITIES.forEach(c => {
+    cityBox.innerHTML += `<a class="cityPill" href="search.html?from=Bengaluru&to=${c}&date=${today}&pax=1">${c}</a>`;
+  });
+
+  /* Offers */
+  const offerBox = document.getElementById("offerGrid");
+  OFFERS.forEach(o => {
+    offerBox.innerHTML += `
+      <div class="offerCard">
+        <div class="perf"></div>
+        <div class="code">${o.code}</div>
+        <div class="value">${o.type === "percent" ? o.value + "% OFF" : "₹" + o.value + " OFF"}</div>
+        <div class="desc">${o.desc}</div>
+      </div>`;
+  });
+
+  /* Reviews */
+  const reviewBox = document.getElementById("reviewGrid");
+  REVIEWS.forEach(r => {
+    reviewBox.innerHTML += `
+      <div class="reviewCard">
+        <div class="reviewStars">${"★".repeat(r.rating)}${"☆".repeat(5 - r.rating)}</div>
+        <p>"${r.text}"</p>
+        <div class="reviewName">${r.name}</div>
+      </div>`;
+  });
+
+  /* FAQ */
+  const faqs = [
+    ["How do I book a ticket on BUS WAVE?", "Search your route on the home page, pick a bus, choose your seat, fill passenger details and complete the demo payment to get your e-ticket."],
+    ["Is this a real payment system?", "No. BUS WAVE is a demo project. No real payments are processed — the payment step simulates a successful transaction."],
+    ["Can I cancel a booking?", "Yes, go to My Bookings and use the Cancel Booking button on any upcoming trip."],
+    ["How do I apply a coupon code?", "Enter a valid coupon code (see the Offers page) in the coupon box during checkout and click Apply."],
+    ["Where can I see my past bookings?", "All your bookings are saved in your browser's local storage and listed under My Bookings."]
+  ];
+  const faqBox = document.getElementById("faqList");
+  faqs.forEach(([q, a], i) => {
+    faqBox.innerHTML += `
+      <div class="faqItem" id="faq${i}">
+        <button class="faqQ">${q}<span class="plus">+</span></button>
+        <div class="faqA"><p>${a}</p></div>
+      </div>`;
+  });
+  faqBox.querySelectorAll(".faqQ").forEach(btn => {
+    btn.addEventListener("click", () => btn.parentElement.classList.toggle("open"));
+  });
+</script>
+</body>
+</html>

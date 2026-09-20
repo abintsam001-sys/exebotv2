@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Select Seats | BUS WAVE</title>
+<meta name="description" content="Choose your seat on an interactive bus layout on BUS WAVE.">
+<link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<header class="siteHeader">
+  <div class="container navRow">
+    <a href="index.html" class="brand"><span class="brandMark">BW</span>BUS<span class="wave">WAVE</span></a>
+    <nav class="navMenu">
+      <a href="index.html">Home</a>
+      <a href="search.html">Search Buses</a>
+      <a href="offers.html">Offers</a>
+      <a href="bookings.html">My Bookings</a>
+      <a href="help.html">Help</a>
+    </nav>
+    <div class="navActions">
+      <div data-auth-slot></div>
+      <button class="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="pageHero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / <a href="search.html">Search Results</a> / Select Seats</div>
+    <h1 id="busOperatorName">Loading…</h1>
+    <p id="busSubInfo" class="mb0"></p>
+    <p id="depArr" class="mb0" style="font-weight:600;color:var(--ink-900)"></p>
+  </div>
+</section>
+
+<section class="section--tight" id="seatApp">
+  <div class="container seatLayoutWrap">
+    <div class="seatPanel">
+      <h3>Choose your seats</h3>
+      <div class="seatLegend">
+        <div class="legendItem"><span class="legendDot" style="background:#e7f8ee;border:1.5px solid #b9ecd0"></span>Available</div>
+        <div class="legendItem"><span class="legendDot" style="background:var(--blue)"></span>Selected</div>
+        <div class="legendItem"><span class="legendDot" style="background:#fbe4e6;border:1.5px solid #f3c3c8"></span>Booked</div>
+      </div>
+      <div class="busFrame mt24">
+        <div class="driverRow"><div class="driverIcon">🚌</div></div>
+        <div id="seatGrid" class="seatGridSeater"></div>
+      </div>
+    </div>
+
+    <aside class="summaryPanel desktopOnly">
+      <h3>Booking Summary</h3>
+      <p class="mb0" style="font-size:.85rem">Selected: <b id="selectedCount">0</b> seat(s)</p>
+      <div class="selectedSeatChips" id="selectedChips"></div>
+      <div class="divider"></div>
+      <div class="summaryRow"><span>Base Fare</span><span id="baseFare">₹0</span></div>
+      <div class="summaryRow"><span>Convenience Fee</span><span id="convFee">₹0</span></div>
+      <div class="summaryRow"><span>GST</span><span id="gstFee">₹0</span></div>
+      <div class="summaryRow total"><span>Total</span><span id="totalFare">₹0</span></div>
+      <button id="continueBtn" class="btn btn--primary btn--block mt16" disabled>Select seats</button>
+    </aside>
+  </div>
+</section>
+
+<div class="stickyMobileBar">
+  <div>
+    <div style="font-weight:800" id="mTotalFare">₹0</div>
+    <div class="busResultType"><span id="mSelectedCount">0</span> seat(s) selected</div>
+  </div>
+  <button id="mContinueBtn" class="btn btn--primary" disabled>Continue</button>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/seats.js"></script>
+</body>
+</html>

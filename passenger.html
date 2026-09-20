@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Passenger Details | BUS WAVE</title>
+<meta name="description" content="Enter passenger details and choose boarding and dropping points on BUS WAVE.">
+<link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<header class="siteHeader">
+  <div class="container navRow">
+    <a href="index.html" class="brand"><span class="brandMark">BW</span>BUS<span class="wave">WAVE</span></a>
+    <nav class="navMenu">
+      <a href="index.html">Home</a>
+      <a href="search.html">Search Buses</a>
+      <a href="offers.html">Offers</a>
+      <a href="bookings.html">My Bookings</a>
+      <a href="help.html">Help</a>
+    </nav>
+    <div class="navActions">
+      <div data-auth-slot></div>
+      <button class="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="pageHero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / <a href="search.html">Search</a> / Seats / Passenger Details</div>
+    <h1>Passenger details</h1>
+    <p id="passRouteInfo" class="mb0"></p>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="container" style="max-width:760px">
+    <form id="passengerForm">
+      <div id="passengerFields"></div>
+
+      <div class="card mt16">
+        <h4>Boarding Point</h4>
+        <div class="pointOptionGrid" id="boardingPoints"></div>
+      </div>
+
+      <div class="card mt16">
+        <h4>Dropping Point</h4>
+        <div class="pointOptionGrid" id="droppingPoints"></div>
+      </div>
+
+      <button type="submit" class="btn btn--primary btn--block mt24">Continue to Checkout</button>
+    </form>
+  </div>
+</section>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/booking.js"></script>
+</body>
+</html>
