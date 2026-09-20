@@ -1,0 +1,61 @@
+/* ==========================================================================
+   BUS WAVE — Responsive Overrides
+   ========================================================================== */
+
+@media (max-width: 1080px) {
+  .whyGrid, .reviewGrid { grid-template-columns: repeat(2, 1fr); }
+  .cityGrid { grid-template-columns: repeat(4, 1fr); }
+  .offerGrid, .offersPageGrid, .kpiGrid { grid-template-columns: repeat(2, 1fr); }
+  .seatLayoutWrap, .checkoutLayout { grid-template-columns: 1fr; }
+  .summaryPanel { position: static; order: -1; }
+  .resultsLayout { grid-template-columns: 1fr; }
+  .filterPanel { position: static; }
+  .adminShell { grid-template-columns: 1fr; }
+  .adminSidebar { display: none; }
+  .adminSidebar.open { display: block; position: fixed; z-index: 900; width: 250px; }
+  .navToggleAdmin { display: inline-flex; }
+}
+
+@media (max-width: 860px) {
+  .navMenu { position: fixed; top: 74px; left: 0; right: 0; background: #fff; flex-direction: column; align-items: stretch; padding: 10px 20px 20px; gap: 4px; border-bottom: 1px solid var(--gray-100); transform: translateY(-130%); opacity: 0; transition: .25s; box-shadow: var(--shadow-card); }
+  .navMenu a { padding: 12px 4px; border-bottom: 1px solid var(--gray-100); }
+  .navMenu.open { transform: translateY(0); opacity: 1; }
+  .navToggle { display: flex; }
+  .navToggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .navToggle.active span:nth-child(2) { opacity: 0; }
+  .navToggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .navActions .btn--sm span { display: none; }
+
+  .heroInner { grid-template-columns: 1fr; }
+  .heroArt { order: -1; }
+  .heroStats { flex-wrap: wrap; gap: 18px; }
+  .whyGrid, .reviewGrid, .offerGrid, .offersPageGrid, .kpiGrid, .helpCatGrid { grid-template-columns: 1fr; }
+  .chipGrid { grid-template-columns: repeat(2, 1fr); }
+  .cityGrid { grid-template-columns: repeat(3, 1fr); }
+  .searchGrid { grid-template-columns: 1fr; }
+
+  .busResultTop { grid-template-columns: 1fr; gap: 12px; text-align: left; }
+  .busResultPrice { text-align: left; }
+  .busResultTimes { justify-content: space-between; }
+
+  .footGrid { grid-template-columns: 1fr 1fr; }
+  .profileStatsGrid { grid-template-columns: 1fr; }
+  .payMethodGrid { grid-template-columns: 1fr; }
+  .formRow2 { grid-template-columns: 1fr; }
+  .ticketGrid { grid-template-columns: 1fr; }
+
+  .stickyMobileBar {
+    display: flex; position: fixed; bottom: 0; left: 0; right: 0; background: #fff;
+    border-top: 1px solid var(--gray-100); padding: 12px 16px; z-index: 800;
+    align-items: center; justify-content: space-between; box-shadow: 0 -4px 16px rgba(0,0,0,.08);
+  }
+  .seatPanel { margin-bottom: 90px; }
+  .summaryPanel.desktopOnly { display: none; }
+}
+
+@media (max-width: 560px) {
+  .cityGrid { grid-template-columns: repeat(2, 1fr); }
+  .section { padding: 52px 0; }
+  .hero { padding: 40px 0 30px; }
+  .searchBox { padding: 16px; }
+}
