@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin Dashboard | BUS WAVE</title>
+<meta name="description" content="BUS WAVE admin dashboard — demo management interface.">
+<link rel="icon" href="../assets/logo/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<link rel="stylesheet" href="../css/admin.css">
+</head>
+<body class="adminBody">
+<div class="adminShell">
+  <aside class="adminSidebar">
+    <div class="adminBrand"><span class="brandMark">BW</span>BUS WAVE Admin</div>
+    <nav class="adminNav">
+      <a href="index.html" class="active">📊 Dashboard</a>
+      <a href="buses.html">🚌 Manage Buses</a>
+      <a href="bookings.html">🎟️ Manage Bookings</a>
+      <a href="users.html">👤 Manage Users</a>
+      <a href="offers.html">🏷️ Manage Offers</a>
+    </nav>
+    <div class="adminNavDivider"></div>
+    <a href="../index.html" class="adminBackLink">← Back to main site</a>
+  </aside>
+
+  <main class="adminMain">
+    <div class="adminTopbar">
+      <div>
+        <button class="navToggleAdmin btn btn--ghost btn--sm">☰</button>
+        <h1>Dashboard</h1>
+        <p>Overview of BUS WAVE demo operations.</p>
+      </div>
+    </div>
+
+    <div class="kpiGrid">
+      <div class="kpiCard"><div class="kpiLabel">Total Buses</div><div class="kpiVal" id="kpiBuses">0</div><div class="kpiDelta">Across 14 cities</div></div>
+      <div class="kpiCard"><div class="kpiLabel">Total Bookings</div><div class="kpiVal" id="kpiBookings">0</div><div class="kpiDelta">All time</div></div>
+      <div class="kpiCard"><div class="kpiLabel">Today's Bookings</div><div class="kpiVal" id="kpiToday">0</div><div class="kpiDelta">Since midnight</div></div>
+      <div class="kpiCard"><div class="kpiLabel">Revenue</div><div class="kpiVal" id="kpiRevenue">₹0</div><div class="kpiDelta">Demo, non-cancelled</div></div>
+    </div>
+
+    <div class="adminPanel">
+      <div class="adminPanelHead"><h3>Recent Bookings</h3><a href="bookings.html" class="btn btn--ghost btn--sm">View all</a></div>
+      <table class="adminTable">
+        <thead><tr><th>Booking ID</th><th>Route</th><th>Passenger</th><th>Amount</th><th>Status</th></tr></thead>
+        <tbody id="recentBookingsTable"></tbody>
+      </table>
+    </div>
+  </main>
+</div>
+
+<script src="../js/data.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/admin.js"></script>
+</body>
+</html>

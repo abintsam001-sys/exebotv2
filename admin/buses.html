@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manage Buses | BUS WAVE Admin</title>
+<link rel="icon" href="../assets/logo/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<link rel="stylesheet" href="../css/admin.css">
+</head>
+<body class="adminBody">
+<div class="adminShell">
+  <aside class="adminSidebar">
+    <div class="adminBrand"><span class="brandMark">BW</span>BUS WAVE Admin</div>
+    <nav class="adminNav">
+      <a href="index.html">📊 Dashboard</a>
+      <a href="buses.html" class="active">🚌 Manage Buses</a>
+      <a href="bookings.html">🎟️ Manage Bookings</a>
+      <a href="users.html">👤 Manage Users</a>
+      <a href="offers.html">🏷️ Manage Offers</a>
+    </nav>
+    <div class="adminNavDivider"></div>
+    <a href="../index.html" class="adminBackLink">← Back to main site</a>
+  </aside>
+
+  <main class="adminMain">
+    <div class="adminTopbar">
+      <div>
+        <button class="navToggleAdmin btn btn--ghost btn--sm">☰</button>
+        <h1>Manage Buses</h1>
+        <p>Add, edit or remove demo buses and adjust price / availability.</p>
+      </div>
+      <button id="addBusBtn" class="btn btn--primary">+ Add Bus</button>
+    </div>
+
+    <div class="adminPanel">
+      <table class="adminTable">
+        <thead><tr><th>ID</th><th>Operator</th><th>Route</th><th>Type</th><th>Price</th><th>Seats</th><th>Rating</th><th>Actions</th></tr></thead>
+        <tbody id="busesTable"></tbody>
+      </table>
+    </div>
+  </main>
+</div>
+
+<div class="adminModal" id="busModal">
+  <div class="adminModalBox">
+    <button class="modalCloseX" data-close-modal>×</button>
+    <h3 id="busModalTitle">Add Bus</h3>
+    <form id="busForm">
+      <div class="formGroup"><label>Operator Name</label><input type="text" id="bfOperator" required></div>
+      <div class="formRow2">
+        <div class="formGroup"><label>From</label><input type="text" id="bfFrom" required></div>
+        <div class="formGroup"><label>To</label><input type="text" id="bfTo" required></div>
+      </div>
+      <div class="formGroup">
+        <label>Bus Type</label>
+        <select id="bfType">
+          <option>AC Sleeper</option><option>Non-AC Sleeper</option><option>AC Seater</option><option>Non-AC Seater</option><option>AC Semi-Sleeper</option>
+        </select>
+      </div>
+      <div class="formRow2">
+        <div class="formGroup"><label>Price (₹)</label><input type="number" id="bfPrice" required min="100"></div>
+        <div class="formGroup"><label>Departure Time</label><input type="time" id="bfDeparture" required></div>
+      </div>
+      <div class="formRow2">
+        <div class="formGroup"><label>Total Seats</label><input type="number" id="bfSeats" required min="10"></div>
+        <div class="formGroup"><label>Available Seats</label><input type="number" id="bfAvailable" required min="0"></div>
+      </div>
+      <button type="submit" class="btn btn--primary btn--block">Save Bus</button>
+    </form>
+  </div>
+</div>
+
+<script src="../js/data.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/admin.js"></script>
+</body>
+</html>
